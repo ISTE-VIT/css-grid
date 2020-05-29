@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+        <div class="container">
+                <div class="big">
+
+                </div>
+                <div class="small-1">
+
+                </div>
+                <div class="small-2">
+
+                </div>
+        </div>
+        <style>
+                .container{
+                        display: grid;
+                        height: 200px;
+                        width: 400px;
+                        background-color: yellow;
+                        grid-template-rows: 1fr 1fr;
+                        grid-template-columns: 1fr 1fr;
+                        /* for implicit grid */
+                        /* grid-template-areas: "big small-1"
+                                             "big small-2"; */
+                }
+                .big{
+                        background-color: pink;
+                        /* grid-area: big; for implicit grid */
+                        /* grid-row-start: 1;
+                        grid-column-start: 1;
+                        grid-row-end: 3;
+                        grid-column-end: 2; */
+
+                        grid-area:  1/ 1 /3 / 2; /* explicit grid*/
+
+                }
+                .small-1{
+                        /* grid-area: small-1; for implicit grid */
+                        background-color: grey;
+                        grid-area: 1/ 2/ 2/3; /* explicit grid*/
+                }
+                .small-2{
+                        /* grid-area: small-2; for implicit grid */
+                        background-color: green;
+                        grid-area: 2/2/3/3;  /* explicit grid*/
+                }
+        </style>
+</body>
+</html>
